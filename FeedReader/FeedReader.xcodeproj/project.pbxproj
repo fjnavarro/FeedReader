@@ -13,9 +13,11 @@
 		83EC51841F1D1C2700F48A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51821F1D1C2700F48A4A /* Main.storyboard */; };
 		83EC51861F1D1C2700F48A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51851F1D1C2700F48A4A /* Assets.xcassets */; };
 		83EC51891F1D1C2700F48A4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51871F1D1C2700F48A4A /* LaunchScreen.storyboard */; };
+		A237D969D5CD0AA93BA27E77 /* libPods-FeedReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4637380D036B56593C15B28 /* libPods-FeedReader.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44DF4B61D29DD193B20EF836 /* Pods-FeedReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader.debug.xcconfig"; sourceTree = "<group>"; };
 		83EC51761F1D1C2700F48A4A /* FeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EC517A1F1D1C2700F48A4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83EC517C1F1D1C2700F48A4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		83EC51851F1D1C2700F48A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EC51881F1D1C2700F48A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83EC518A1F1D1C2700F48A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4637380D036B56593C15B28 /* libPods-FeedReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48B0C2394A536FCC6A84ECB /* Pods-FeedReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A237D969D5CD0AA93BA27E77 /* libPods-FeedReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199CF49F7AF8E1F915D69CCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4637380D036B56593C15B28 /* libPods-FeedReader.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		83EC516D1F1D1C2700F48A4A = {
 			isa = PBXGroup;
 			children = (
 				83EC51781F1D1C2700F48A4A /* FeedReader */,
 				83EC51771F1D1C2700F48A4A /* Products */,
+				D97EB30490188E05B8157586 /* Pods */,
+				199CF49F7AF8E1F915D69CCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D97EB30490188E05B8157586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44DF4B61D29DD193B20EF836 /* Pods-FeedReader.debug.xcconfig */,
+				F48B0C2394A536FCC6A84ECB /* Pods-FeedReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83EC518D1F1D1C2700F48A4A /* Build configuration list for PBXNativeTarget "FeedReader" */;
 			buildPhases = (
+				AA8FFC609BF4A9648D4C40D1 /* [CP] Check Pods Manifest.lock */,
 				83EC51721F1D1C2700F48A4A /* Sources */,
 				83EC51731F1D1C2700F48A4A /* Frameworks */,
 				83EC51741F1D1C2700F48A4A /* Resources */,
+				19F8B9E5AAC9D9087D570491 /* [CP] Embed Pods Frameworks */,
+				18F5DDE6CE0BC14A2AE6DEE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18F5DDE6CE0BC14A2AE6DEE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19F8B9E5AAC9D9087D570491 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA8FFC609BF4A9648D4C40D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83EC51721F1D1C2700F48A4A /* Sources */ = {
@@ -271,10 +346,12 @@
 		};
 		83EC518E1F1D1C2700F48A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DF4B61D29DD193B20EF836 /* Pods-FeedReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C72Z3BCX49;
 				INFOPLIST_FILE = FeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fjnavarro.FeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,10 +360,12 @@
 		};
 		83EC518F1F1D1C2700F48A4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F48B0C2394A536FCC6A84ECB /* Pods-FeedReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C72Z3BCX49;
 				INFOPLIST_FILE = FeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fjnavarro.FeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
