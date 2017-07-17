@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		83EC517B1F1D1C2700F48A4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC517A1F1D1C2700F48A4A /* main.m */; };
 		83EC517E1F1D1C2700F48A4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC517D1F1D1C2700F48A4A /* AppDelegate.m */; };
-		83EC51811F1D1C2700F48A4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51801F1D1C2700F48A4A /* ViewController.m */; };
 		83EC51841F1D1C2700F48A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51821F1D1C2700F48A4A /* Main.storyboard */; };
 		83EC51861F1D1C2700F48A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51851F1D1C2700F48A4A /* Assets.xcassets */; };
 		83EC51891F1D1C2700F48A4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EC51871F1D1C2700F48A4A /* LaunchScreen.storyboard */; };
 		83EC51931F1D2F9900F48A4A /* RemoteFeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51921F1D2F9900F48A4A /* RemoteFeedService.m */; };
 		83EC51971F1D49DA00F48A4A /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51961F1D49DA00F48A4A /* ItemModel.m */; };
+		83EC519D1F1D57AF00F48A4A /* ListFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */; };
+		83EC51A11F1D5EA000F48A4A /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51A01F1D5EA000F48A4A /* ItemTableViewCell.m */; };
 		A237D969D5CD0AA93BA27E77 /* libPods-FeedReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4637380D036B56593C15B28 /* libPods-FeedReader.a */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +25,6 @@
 		83EC517A1F1D1C2700F48A4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83EC517C1F1D1C2700F48A4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83EC517D1F1D1C2700F48A4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83EC517F1F1D1C2700F48A4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		83EC51801F1D1C2700F48A4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		83EC51831F1D1C2700F48A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83EC51851F1D1C2700F48A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EC51881F1D1C2700F48A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,10 @@
 		83EC51921F1D2F9900F48A4A /* RemoteFeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteFeedService.m; sourceTree = "<group>"; };
 		83EC51951F1D49DA00F48A4A /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
 		83EC51961F1D49DA00F48A4A /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		83EC519B1F1D57AF00F48A4A /* ListFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFeedTableViewController.h; sourceTree = "<group>"; };
+		83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFeedTableViewController.m; sourceTree = "<group>"; };
+		83EC519F1F1D5EA000F48A4A /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
+		83EC51A01F1D5EA000F48A4A /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
 		C4637380D036B56593C15B28 /* libPods-FeedReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48B0C2394A536FCC6A84ECB /* Pods-FeedReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,12 +82,12 @@
 		83EC51781F1D1C2700F48A4A /* FeedReader */ = {
 			isa = PBXGroup;
 			children = (
-				83EC51941F1D487A00F48A4A /* Model */,
-				83EC51901F1D2F5B00F48A4A /* Service */,
 				83EC517C1F1D1C2700F48A4A /* AppDelegate.h */,
 				83EC517D1F1D1C2700F48A4A /* AppDelegate.m */,
-				83EC517F1F1D1C2700F48A4A /* ViewController.h */,
-				83EC51801F1D1C2700F48A4A /* ViewController.m */,
+				83EC51941F1D487A00F48A4A /* Model */,
+				83EC519E1F1D5E2F00F48A4A /* View */,
+				83EC51A21F1D730900F48A4A /* Controllers */,
+				83EC51901F1D2F5B00F48A4A /* Service */,
 				83EC51821F1D1C2700F48A4A /* Main.storyboard */,
 				83EC51851F1D1C2700F48A4A /* Assets.xcassets */,
 				83EC51871F1D1C2700F48A4A /* LaunchScreen.storyboard */,
@@ -118,6 +121,24 @@
 				83EC51961F1D49DA00F48A4A /* ItemModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		83EC519E1F1D5E2F00F48A4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83EC519F1F1D5EA000F48A4A /* ItemTableViewCell.h */,
+				83EC51A01F1D5EA000F48A4A /* ItemTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83EC51A21F1D730900F48A4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83EC519B1F1D57AF00F48A4A /* ListFeedTableViewController.h */,
+				83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		D97EB30490188E05B8157586 /* Pods */ = {
@@ -252,10 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EC51A11F1D5EA000F48A4A /* ItemTableViewCell.m in Sources */,
 				83EC51971F1D49DA00F48A4A /* ItemModel.m in Sources */,
-				83EC51811F1D1C2700F48A4A /* ViewController.m in Sources */,
 				83EC517E1F1D1C2700F48A4A /* AppDelegate.m in Sources */,
 				83EC517B1F1D1C2700F48A4A /* main.m in Sources */,
+				83EC519D1F1D57AF00F48A4A /* ListFeedTableViewController.m in Sources */,
 				83EC51931F1D2F9900F48A4A /* RemoteFeedService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

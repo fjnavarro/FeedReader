@@ -11,7 +11,9 @@
 @interface ItemModel : NSObject
 
 @property (nonatomic, copy) NSString *descrip;
+@property (nonatomic, copy) NSString *content;
 @property (nonatomic, strong) NSURL *link;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) NSURL *imageLink;
 
 @end

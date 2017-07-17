@@ -17,6 +17,6 @@ typedef void (^RemoteFeedServiceCompletionBlock)(NSArray <ItemModel *>*object, N
 
 @interface RemoteFeedService : NSObject
 
-+(void)getFeedOnCompletion: (RemoteFeedServiceCompletionBlock) completionBlock;
+-(void)getFeedOnCompletion: (RemoteFeedServiceCompletionBlock) completionBlock;
 
 @end

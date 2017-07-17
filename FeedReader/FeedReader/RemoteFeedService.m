@@ -13,7 +13,7 @@
 
 @implementation RemoteFeedService
 
-+(void)getFeedOnCompletion: (RemoteFeedServiceCompletionBlock) completionBlock {
+-(void)getFeedOnCompletion: (RemoteFeedServiceCompletionBlock) completionBlock {
     // Url del Feed
     NSURL *url = [NSURL URLWithString:feedURL];
     
@@ -38,8 +38,10 @@
              for (NSDictionary *item in items) {
                  ItemModel *itemModel = [ItemModel new];
                  itemModel.title = [item objectForKey:@"title"];
-                 itemModel.link = [item objectForKey:@"link"];
-                 itemModel.descrip = [item objectForKey:@"description"];
+                 itemModel.link = [NSURL URLWithString:[item objectForKey:@"link"]];
+                 itemModel.content = [item objectForKey:@"description"];
+                 itemModel.descrip = [self cleanHTMLWithString:[item objectForKey:@"description"]];
+                 itemModel.imageLink = [self getImageUrlWithString:[item objectForKey:@"description"]];
                  
                  [results addObject:itemModel];
              }
@@ -51,6 +53,33 @@
              
              completionBlock(nil, error);
          }];
+}
+
+#pragma mark - Utilities
+
+-(NSString *)cleanHTMLWithString: (NSString *) string {
+    // Eliminamos todo el html del
+    NSAttributedString *attr = [[NSAttributedString alloc] initWithData:[string dataUsingEncoding:NSUTF8StringEncoding]
+                                                                options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                                                          NSCharacterEncodingDocumentAttribute:@(NSUTF8StringEncoding)}
+                                                     documentAttributes:nil
+                                                                  error:nil];
+    NSString *stringClean = [attr string];
+    
+    if ([stringClean hasPrefix:@"\n"]) {
+        // Si empezamos con un salto de línea, limpiamos la cadena
+        stringClean = [stringClean substringFromIndex:1];
+    }
+    
+    return  stringClean;
+}
+
+-(NSURL *)getImageUrlWithString: (NSString *) string {
+    // Obtenemos la primera imágen del html
+    string = [string substringFromIndex:[string rangeOfString:@"src="].location+[@"src=" length]+1];
+    string = [string substringToIndex:[string rangeOfString:@"\""].location];
+    
+    return [NSURL URLWithString:[@"http:" stringByAppendingString:string]];
 }
 
 @end

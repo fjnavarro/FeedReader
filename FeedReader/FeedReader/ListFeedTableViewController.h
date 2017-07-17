@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ListFeedTableViewController.h
 //  FeedReader
 //
 //  Created by Francisco José Navarro García on 17/7/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ListFeedTableViewController : UITableViewController
 
 @end
-
