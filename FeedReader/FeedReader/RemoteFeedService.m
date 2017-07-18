@@ -36,12 +36,11 @@
              NSMutableArray *results = [NSMutableArray new];
              
              for (NSDictionary *item in items) {
-                 ItemModel *itemModel = [ItemModel new];
-                 itemModel.title = [item objectForKey:@"title"];
-                 itemModel.link = [NSURL URLWithString:[item objectForKey:@"link"]];
-                 itemModel.content = [item objectForKey:@"description"];
-                 itemModel.descrip = [self cleanHTMLWithString:[item objectForKey:@"description"]];
-                 itemModel.imageLink = [self getImageUrlWithString:[item objectForKey:@"description"]];
+                 ItemModel *itemModel = [ItemModel itemWithTitle:[item objectForKey:@"title"]
+                                                    andImageLink:[self getImageUrlWithString:[item objectForKey:@"description"]]
+                                                         andLink:[NSURL URLWithString:[item objectForKey:@"link"]]
+                                                  andDescription:[self cleanHTMLWithString:[item objectForKey:@"description"]]
+                                                      andContent:[self fixedImageInHTMLWithString:[item objectForKey:@"description"]]];
                  
                  [results addObject:itemModel];
              }
@@ -73,6 +72,14 @@
     
     return  stringClean;
 }
+
+-(NSString *)fixedImageInHTMLWithString: (NSString *) string {
+    // Corregimos la url de las imáganes en el HTML
+    
+    return  [string stringByReplacingOccurrencesOfString:@"src=\"//"
+                                              withString:@"src=\"http://"];
+}
+
 
 -(NSURL *)getImageUrlWithString: (NSString *) string {
     // Obtenemos la primera imágen del html

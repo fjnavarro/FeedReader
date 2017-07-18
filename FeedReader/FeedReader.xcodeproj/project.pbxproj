@@ -16,6 +16,7 @@
 		83EC51971F1D49DA00F48A4A /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51961F1D49DA00F48A4A /* ItemModel.m */; };
 		83EC519D1F1D57AF00F48A4A /* ListFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */; };
 		83EC51A11F1D5EA000F48A4A /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51A01F1D5EA000F48A4A /* ItemTableViewCell.m */; };
+		83EC51A51F1E088A00F48A4A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC51A41F1E088A00F48A4A /* DetailViewController.m */; };
 		A237D969D5CD0AA93BA27E77 /* libPods-FeedReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4637380D036B56593C15B28 /* libPods-FeedReader.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFeedTableViewController.m; sourceTree = "<group>"; };
 		83EC519F1F1D5EA000F48A4A /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
 		83EC51A01F1D5EA000F48A4A /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
+		83EC51A31F1E088A00F48A4A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		83EC51A41F1E088A00F48A4A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C4637380D036B56593C15B28 /* libPods-FeedReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48B0C2394A536FCC6A84ECB /* Pods-FeedReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedReader/Pods-FeedReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,8 @@
 			children = (
 				83EC519B1F1D57AF00F48A4A /* ListFeedTableViewController.h */,
 				83EC519C1F1D57AF00F48A4A /* ListFeedTableViewController.m */,
+				83EC51A31F1E088A00F48A4A /* DetailViewController.h */,
+				83EC51A41F1E088A00F48A4A /* DetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				83EC517B1F1D1C2700F48A4A /* main.m in Sources */,
 				83EC519D1F1D57AF00F48A4A /* ListFeedTableViewController.m in Sources */,
 				83EC51931F1D2F9900F48A4A /* RemoteFeedService.m in Sources */,
+				83EC51A51F1E088A00F48A4A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

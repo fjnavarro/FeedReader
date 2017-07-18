@@ -11,6 +11,7 @@
 #import "ItemModel.h"
 #import "ItemTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailViewController.h"
 
 @interface ListFeedTableViewController ()
 
@@ -36,6 +37,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)pushRefresh:(UIBarButtonItem *)sender {
+    [self loadFeeds];
 }
 
 #pragma mark - Table view data source
@@ -100,14 +105,24 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showFeedSegue"]) {
+        // Vamos al detalle del feed
+        
+        // Obtenemos el feed seleccionado en el tableView
+        NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.lastObject;
+        ItemModel *feed = [self.feeds objectAtIndex:indexPath.row];
+        
+        // Se lo damos al detalle
+        DetailViewController *detailFeed = [segue destinationViewController];
+        detailFeed.feed = feed;
+    }
 }
-*/
+
 
 @end

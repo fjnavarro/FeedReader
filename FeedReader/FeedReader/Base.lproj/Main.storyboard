@@ -72,6 +72,7 @@
                                     <outlet property="descriptionLabel" destination="NPB-Dd-YrC" id="jrB-cE-f6q"/>
                                     <outlet property="imageImageView" destination="NiK-q6-F1A" id="Rnt-4Q-aI4"/>
                                     <outlet property="titleLabel" destination="nRR-EN-U2A" id="LTM-PB-3s3"/>
+                                    <segue destination="3t2-m4-34k" kind="show" identifier="showFeedSegue" id="5UQ-YN-z24"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,11 +81,71 @@
                             <outlet property="delegate" destination="dBP-82-7fA" id="udR-Df-yST"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FeedReader" id="l9p-P1-xd8"/>
+                    <navigationItem key="navigationItem" title="FeedReader" id="l9p-P1-xd8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="GIy-1Y-WJK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="AhO-of-j06">
+                            <connections>
+                                <action selector="pushRefresh:" destination="dBP-82-7fA" id="QJX-bY-WHU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SkJ-Oh-BKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309.5999999999999" y="177.66116941529236"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="XgL-DL-LiJ">
+            <objects>
+                <viewController id="3t2-m4-34k" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aim-ZU-do7"/>
+                        <viewControllerLayoutGuide type="bottom" id="N3T-GG-fag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxo-2f-xnR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWG-gj-VdW">
+                                <rect key="frame" x="10" y="74" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOY-qH-3Mi">
+                                <rect key="frame" x="10" y="137" width="355" height="520"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3t2-m4-34k" id="1wL-bi-Y91"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JWG-gj-VdW" firstAttribute="top" secondItem="aim-ZU-do7" secondAttribute="bottom" constant="10" id="9ZU-0h-zAd"/>
+                            <constraint firstAttribute="trailing" secondItem="AOY-qH-3Mi" secondAttribute="trailing" constant="10" id="Fwv-h1-ofA"/>
+                            <constraint firstItem="N3T-GG-fag" firstAttribute="top" secondItem="AOY-qH-3Mi" secondAttribute="bottom" constant="10" id="L7q-8L-oXi"/>
+                            <constraint firstItem="JWG-gj-VdW" firstAttribute="leading" secondItem="fxo-2f-xnR" secondAttribute="leading" constant="10" id="Luu-ZA-PPS"/>
+                            <constraint firstItem="AOY-qH-3Mi" firstAttribute="leading" secondItem="fxo-2f-xnR" secondAttribute="leading" constant="10" id="cd6-eF-reC"/>
+                            <constraint firstAttribute="trailing" secondItem="JWG-gj-VdW" secondAttribute="trailing" constant="10" id="jv3-i8-hE2"/>
+                            <constraint firstItem="AOY-qH-3Mi" firstAttribute="top" secondItem="JWG-gj-VdW" secondAttribute="bottom" constant="42" id="pGU-fK-wVr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feed" id="Uv9-83-Nfa">
+                        <barButtonItem key="rightBarButtonItem" title="Ver en el navegador" id="MpJ-ja-32t">
+                            <connections>
+                                <action selector="pushShowInSafari:" destination="3t2-m4-34k" id="yAo-FG-qbM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentWebView" destination="AOY-qH-3Mi" id="4fl-7P-BxV"/>
+                        <outlet property="titleLabel" destination="JWG-gj-VdW" id="P57-Sr-501"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knb-q4-5TU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208.8000000000002" y="171.36431784107947"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e3Y-do-CQ3">

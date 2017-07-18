@@ -16,4 +16,11 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) NSURL *imageLink;
 
+
++(instancetype) itemWithTitle: (NSString *) title
+                 andImageLink: (NSURL *) imageLink
+                      andLink: (NSURL *) link
+               andDescription: (NSString *) description
+                   andContent: (NSString *) content;
+
 @end
